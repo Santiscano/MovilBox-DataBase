@@ -1,0 +1,121 @@
+.usuarios{
+    width: 89vw;
+    min-height: 170vh;
+    background-color: #fff;
+    margin-left: 120px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 90px;
+}
+.usuarios .fila--1, .usuarios .fila--2{
+    margin: 20px 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.usuarios .fila--1 h3{
+    font-size: 1.4rem;
+    font-weight: 200;
+    color: #5e5873;
+}
+.usuarios .fila--1 .usuarios__container-buttons{
+    margin-right: 5px;
+}
+.usuarios .fila--1 .usuarios__container-buttons .agregar{
+    color: white;
+    background-color:#99cf16;
+    border: 1px solid #99cf16;
+    border-radius: 4px;
+    width: 200px;
+    margin-left: 30px;
+    cursor: pointer;
+    height: 35px;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+}
+.usuarios .fila--1 .usuarios__container-buttons .export{
+    color: #99cf16;
+    background-color: white;
+    border: 2px solid #99cf16;
+    border-radius: 4px;
+    width: 105px;
+    margin-left: 30px;
+    cursor: pointer;
+    height: 32px;
+    font-size: 14px;
+    transition: all 0.2s ease-in-out;
+}
+.usuarios .fila--1 .usuarios__container-buttons .export::before{
+    content:url(../../assets/Iconos/Share.svg);
+    margin-right: 5px;
+}
+.usuarios .fila--1 .usuarios__container-buttons .export::after{
+    content: url(../../assets/Iconos/ChevronDown.svg);
+    margin-left: 5px;
+}
+.usuarios .fila--1 .usuarios__container-buttons .agregar:hover,
+.usuarios .fila--1 .usuarios__container-buttons .export:hover{
+    transform: scale(1.1);
+}
+
+/* fila 2 */
+.fila--2 .usuarios__ver span{
+    color: #7b8691;
+    font-weight: 100;
+    font-size: 1.1rem;
+}
+.fila--2 .usuarios__ver .diez{
+    margin-left: 30px;
+    cursor: pointer;
+}
+.fila--2 .usuarios__ver .diez::after{
+    content: url(../../assets/Iconos/ChevronDown.svg);
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.fila--2 .usuarios__buscar .usuarios__buscar-label{
+    color: #7b8691;
+    font-weight: 100;
+    font-size: 1.1rem;
+    margin-right: 16px;
+}
+.fila--2 .usuarios__buscar input{
+    height: 30px;
+    width: 190px;
+    border: 1px solid #bec2c7;
+    border-radius: 7px;
+}
+.fila--2 .usuarios__buscar input::placeholder{
+    color: #d3d6d8;
+}
+/* fila 3 */
+.usuarios .fila--3{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #f3f2f7;
+    height: 12vh;
+}
+.usuarios .fila--3 p{
+    /* padding: 10px auto; */
+    margin: 10px 0;
+    font-size: 1.3rem;
+    font-weight: 300;
+    color: #576573;
+}
+.usuarios .fila--3 p::before{
+    content: url(../../assets/Iconos/ChevronUP.svg);
+    margin-right: 10px;
+    cursor: pointer;
+}
+.usuarios .fila--3 p:hover{
+    color: #57657384;
+}
+.usuarios .fila--4 .estado-vacio{
+    width: 900px;
+    height: auto;
+    margin: 0 auto;
+}

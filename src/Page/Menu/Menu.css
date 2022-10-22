@@ -1,0 +1,45 @@
+.options__menu{
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    position: fixed;
+    height: 100%;
+    background: white;
+    width: 90px;
+}
+
+
+/* parte alta menu */
+.options__menu-high{
+    margin: 30px 20px;
+}
+.options__menu-high a img{
+    display: flex;
+    width: 45px;
+    margin: 0 auto;
+    cursor: pointer;
+}
+.options__menu-high .options__menu__container-red{
+    background-color: #f8f8f8;
+    width: 45px;
+    height: 45px;
+    margin: 25px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+/* parte baja */
+.options__menu .options__menu-low{
+    margin: 80px 40px;
+}
+.options__menu .options__menu-low i {
+    display: block;
+    margin-bottom: 26px;
+    cursor: pointer;
+}
+.options__menu .options__menu-low i:hover {
+    color: rgb(153 207 22) ;
+}

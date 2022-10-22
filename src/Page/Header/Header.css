@@ -1,0 +1,41 @@
+.header__container{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: rgb(153 207 22);
+    margin-left: 120px;
+    margin-top: 20px;
+    width: 89vw;
+    height: 60px;
+    border-radius: 8px;
+    margin-bottom: 105px;
+}
+.header__left, .header__Right{
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.header__left i{
+    margin-left: 15px;
+    padding: 10px;
+    cursor: pointer;
+}
+.header__Right i, .header__Right span{
+    margin-right: 15px;
+    text-align: right;
+    cursor: pointer;
+}
+.header__Right img{
+    width: 40px;
+    margin-right: 8px;
+    cursor: pointer;
+}
+.header__Right .header__right--final-span{
+    background-color: #fff;
+    padding: 12px;
+    border-radius: 50%;
+    color: #00baba;
+    margin-right: 20px;
+}
