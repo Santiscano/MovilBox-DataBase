@@ -1,6 +1,7 @@
 import React from 'react';
 import Contenedor from '../../components/Contenedor'
 import Users from '../../components/Users';
+import FiltroBusqueda from '../../components/FiltroBusqueda'
 // context
 import { ModalUserContextProvider } from '../../useContext/modalsContext'
 
@@ -12,7 +13,7 @@ const index = () => {
     <main>
       <Contenedor/>
       <ModalUserContextProvider>
-        {/* <FiltroBusqueda/> */}
+        <FiltroBusqueda/>
         <Users/>
       </ModalUserContextProvider>
     </main>

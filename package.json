@@ -15,12 +15,14 @@
     "@mui/material": "^5.10.10",
     "@mui/styled-engine-sc": "^5.10.6",
     "@reduxjs/toolkit": "^1.8.6",
+    "formik": "^2.2.9",
     "gridjs": "^5.1.0",
     "gridjs-react": "^5.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.38.0",
-    "styled-components": "^5.3.6"
+    "styled-components": "^5.3.6",
+    "sweetalert2": "^11.6.1"
   },
   "devDependencies": {
     "@types/react": "^18.0.17",

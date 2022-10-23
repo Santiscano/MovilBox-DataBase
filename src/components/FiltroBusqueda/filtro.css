@@ -1,0 +1,82 @@
+.filtroUsuarios{
+    width: 89vw;
+    height: 40vh;
+    background-color: #fff;
+    margin-left: 120px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 90px;
+}
+.filtroUsuarios .filtroUsuarios__container-title{
+    margin: 20px 40px;
+}
+.filtroUsuarios .filtroUsuarios__container-title{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 1.15rem;
+    color: #576573;
+}
+.filtroUsuarios .filtroUsuarios__container-title button {
+    color: #99cf16;
+    background-color: white;
+    border: 1px solid #99cf16;
+    border-radius: 4px;
+    padding: 0 25px;
+    cursor: pointer;
+    height: 32px;
+    font-size: 14px;
+    transition: all 0.2s ease-in-out;
+}
+.filtroUsuarios .filtroUsuarios__container-title button::before{
+    content:url(../../assets/Iconos/Clean.svg)
+}
+.filtroUsuarios .filtroUsuarios__container-title button:hover {
+    transform: scale(1.1);
+}
+
+/* formulario */
+.filtroUsuarios form{}
+/* contenedor principal */
+.formulario__filtroUsuarios{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(290px, 1fr));
+    /* align-items: stretch; */
+    /* justify-content: space-around; */
+    /* height: 120px; */
+    /* margin-bottom: 20px; */
+}
+/* contenedor label & input */
+.formulario__filtroUsuarios--item{
+    margin: 5px auto;
+}
+
+/* items */
+.formulario__filtroUsuarios .formulario__filtroUsuarios--item  label{
+    color: #7b8691;
+    font-weight: 200;
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+}
+.formulario__filtroUsuarios .formulario__filtroUsuarios--item input{
+    display: block;
+    height: 48px;
+    width: 500px;
+    border: 1px solid #bec2c7;
+    border-radius: 10px;
+}
+.formulario__filtroUsuarios .formulario__filtroUsuarios--item input::placeholder{
+    color: #d3d6d8;
+}
+
+.formulario__filtroUsuarios .formulario__filtroUsuarios--item .formulario__select{
+    display: block;
+    height: 48px;
+    width: 500px;
+    border: 1px solid #bec2c7;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
+
