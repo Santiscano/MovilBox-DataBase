@@ -1,13 +1,14 @@
 import React, { useState, useContext } from 'react'
-import './agregar.css'
+import './editar.css'
 // hook form
 import { useForm } from "react-hook-form";
 // useContext
 import ModalUserContext from '../../useContext/modalsContext'
+import { ConstructionOutlined } from '@mui/icons-material';
 
 const index = () => {
   // cerrar modal
-  const {openCloseAdd, setOpenCloseAdd} = useContext(ModalUserContext);
+  const { openCloseEdit, setOpenCloseEdit, IDUserToEdit, setIDUserToEdit} = useContext(ModalUserContext);
   const handleClickClose = (e) => {
     e.preventDefault();
     // e.stopPropagation();
@@ -28,42 +29,45 @@ const index = () => {
       reverseButtons: true
     }).then((result) => {
       if (result.isConfirmed) {
-        setOpenCloseAdd(!openCloseAdd)
+        setOpenCloseEdit(!openCloseEdit)
       }
     })
   }
   // uso hook
   const { register, handleSubmit, watch, formState: { errors } } = useForm();
-  // funcion que crea usuario en DB
+  // funcion que Edita usuario en DB
   const onSubmit = async (data, e) => {
     try{
-      const response = await fetch('http://pruebasclaro.movilbox.net:81/desarrollo/test_mbox/public/api/1026146629/users', {
-        method: 'POST',
+      console.log(data, 'cruda antes de peticion');
+      const response = await fetch(`http://pruebasclaro.movilbox.net:81/desarrollo/test_mbox/public/api/1026146629/users/${IDUserToEdit}`,{
+        method: 'PUT',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({
           "name": data.name,
           "email": data.email,
-          "profile": data.profile
+          "profile": data.profile,
+          "state": data.state,
         })
       })
-      const dataResult = await response.json();
-      console.log(dataResult, 'de aqui registro');
+      const dataResultEdit = await response.json();
+      console.log(dataResultEdit, 'ya editados');
       Swal.fire({
         icon: `success`,
         title: `Muy bien!`,
-        text: `¡El usuario ha sido creado satisfactoriamente! Hemos enviado un correo de activacion a: ${dataResult.user.email}`,
+        text: `¡Los cambios del usuario: ${dataResultEdit.user.name} con email: ${dataResultEdit.user.email} han sido guardados satisfactoriamente`,
         showConfirmButton: false,
         timer: 7000
       });
-    }catch(e) {
-      setOpenCloseAdd(!openCloseAdd);
+    }catch(error){
+      console.log(error)
+      setOpenCloseEdit(!openCloseEdit);
       Swal.fire({
         icon: 'error',
-        title: 'Oops...',
-        text: 'El usuario no puede ser creado. ¡Intentalo nuevamente',
+        title: '¿Oops... ?',
+        text: 'A ocurrido un error intenta',
       })
     }
-      setOpenCloseAdd(!openCloseAdd);
+    setOpenCloseEdit(!openCloseEdit);
       e.stopPropagation();
   };
 
@@ -71,7 +75,7 @@ const index = () => {
     <section className='agregar__container'>
 
       <div className="agregarUsuarios__container-title">
-        <h3>Agregar Nuevo Usuario</h3>
+        <h3>Editar Usuario</h3>
         {/* click aqui debe cerrar el modal agregar */}
         <i className="fa-solid fa-xmark" onClick={handleClickClose} style={{cursor: 'pointer'}}></i>
       </div>
@@ -104,7 +108,7 @@ const index = () => {
             {errors.email?.type === 'pattern' && <span className="error" >esto no es un correo valido</span>}
           </div>
   
-          {/* item 3 peerfil */}
+          {/* item 3 perfil */}
           <div className="formulario__agregarUsuarios--item">
             <label htmlFor="profile">Perfil</label>
             <select {...register("profile")}>
@@ -116,9 +120,20 @@ const index = () => {
             </select>
           </div>
 
+          {/* item 4 Estado */}
+          <div className="formulario__agregarUsuarios--item">
+            <label htmlFor="state">estado</label>
+            <select {...register("state")}>
+              <option value="2" /**disabled */>Selecciona un campo</option>
+              <option value="1" >Activo</option>
+              <option value="0">Inactivo</option>
+            </select>
+          </div>
+
+
           {/* buttons */}
           <div className="agregarUsuarios__container-buttons">
-            <button className="agregar" onClick={()=>handleSubmit(onSubmit)}>Agregar</button>
+            <button className="agregar" onClick={()=>handleSubmit(onSubmit)}>Editar</button>
             <button className="cancel" onClick={handleClickClose}>Cancelar</button>
           </div>
 

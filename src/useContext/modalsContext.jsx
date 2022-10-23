@@ -7,9 +7,16 @@ export function ModalUserContextProvider({ children }) {
     const [openCloseAdd, setOpenCloseAdd] = useState(false);
     const [openCloseEdit, setOpenCloseEdit] = useState(false);
     const [openCloseDelete, setOpenCloseDelete] = useState(false);
+    const [IDUserToEdit, setIDUserToEdit] = useState('');
 
     return(
-        <ModalUserContext.Provider value={{openCloseAdd, setOpenCloseAdd, openCloseEdit, setOpenCloseEdit, openCloseDelete, setOpenCloseDelete}} >
+        <ModalUserContext.Provider value={{
+            openCloseAdd, setOpenCloseAdd, 
+            openCloseEdit, setOpenCloseEdit, 
+            openCloseDelete, setOpenCloseDelete, 
+            IDUserToEdit, setIDUserToEdit
+            }} 
+        >
             { children }
         </ModalUserContext.Provider>
     )

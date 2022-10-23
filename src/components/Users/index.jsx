@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import './users.css'
 import TableUsers from '../TableUsers'
 import AgregarUsuario from '../AgregarUsuario'
+import EditarUsuario from '../EditarUsuario'
 // useContext import
 import ModalUserContext from '../../useContext/modalsContext.jsx'
 
@@ -13,7 +14,7 @@ import ModalUserContext from '../../useContext/modalsContext.jsx'
 const index = () => {
   // redux
   // useContext
-  const {openCloseAdd, setOpenCloseAdd} = useContext(ModalUserContext);
+  const {openCloseAdd, setOpenCloseAdd, openCloseEdit, setOpenCloseEdit } = useContext(ModalUserContext);
 
   //funcion modificadora abrir modal nuevo usuario
   const handleClickOpen = () => {
@@ -53,7 +54,8 @@ const index = () => {
 
       {/* modal con condicional para abrir */}
       { openCloseAdd && <AgregarUsuario/> }
-
+      { openCloseEdit && <EditarUsuario/> }
+      {/* <EditarUsuario/> */}
       
     </section>
   )

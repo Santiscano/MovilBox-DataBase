@@ -1,0 +1,102 @@
+/* general */
+.agregar__container{
+    background-color: white;
+    position: fixed;
+    width: 370px;
+    height: 100%;
+    z-index: 0;
+    top: 0;
+    right: 0;
+    transition: all 300ms ease-in-out;
+}
+
+/* titulos */
+.agregar__container .agregarUsuarios__container-title{
+    background-color: #f8f8f8;
+    color: #5e5873;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+}
+.agregar__container .agregarUsuarios__container-title h3{
+    margin-left: 30px;
+}
+.agregar__container .agregarUsuarios__container-title i{
+    margin-right: 20px;
+    width: 15px;
+}
+/* inputs */
+.formulario__agregarUsuarios{
+    margin-top: 25px;
+    margin-left: 20px;
+}
+.formulario__agregarUsuarios .formulario__agregarUsuarios--item label{
+    display: block;
+    color: #79848f;
+    font-size: 16px;
+    margin-left: 10px;
+}
+.formulario__agregarUsuarios .formulario__agregarUsuarios--item label::after{
+    content: "*";
+    font-size: 12px;
+    color: red;
+}
+.formulario__agregarUsuarios .formulario__agregarUsuarios--item input,
+.formulario__agregarUsuarios .formulario__agregarUsuarios--item select{
+    border: 1px solid #bbbfc4;
+    width: 90%;
+    height: 40px;
+    margin: 10px;
+    border-radius: 8px;
+}
+.formulario__agregarUsuarios .formulario__agregarUsuarios--item input:focus,
+.formulario__agregarUsuarios .formulario__agregarUsuarios--item select:focus{
+    border: 3px solid #99cf16;
+}
+.formulario__agregarUsuarios .formulario__agregarUsuarios--item input::placeholder,
+.formulario__agregarUsuarios .formulario__agregarUsuarios--item select::placeholder{
+    color: #c6c9cd;
+}
+
+/* buttons */
+.formulario__agregarUsuarios .agregarUsuarios__container-buttons{
+    margin-top: 50px;
+}
+.formulario__agregarUsuarios .agregarUsuarios__container-buttons .agregar{
+    color: white;
+    background-color:#99cf16;
+    border: 1px solid #99cf16;
+    border-radius: 4px;
+    padding: 0 15px;
+    margin-left: 30px;
+    cursor: pointer;
+    width: 110px;
+    height: 40px;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+}
+.formulario__agregarUsuarios .agregarUsuarios__container-buttons .cancel{
+    color: #99cf16;
+    background-color: white;
+    border: 1px solid #99cf16;
+    border-radius: 4px;
+    padding: 0 15px;
+    margin-left: 30px;
+    cursor: pointer;
+    width: 110px;
+    height: 40px;
+    font-size: 18px;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+}
+.agregarUsuarios__container-buttons .agregar:hover,
+.agregarUsuarios__container-buttons .cancel:hover{
+    transform: scale(1.1);
+}
+.formulario__agregarUsuarios .formulario__agregarUsuarios--item .error{
+    color: red;
+}
+

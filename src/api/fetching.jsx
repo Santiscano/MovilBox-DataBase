@@ -1,0 +1,1 @@
+// aqui dentro de un useContext pongo todas las peticiones y las uso donde se necesiten
