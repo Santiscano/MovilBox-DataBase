@@ -27,6 +27,16 @@ const index = () => {
     setSearchEmail(e.target.value);
     console.log(e.target.value);
   }
+  // const userNothing = (datofiltrado) => {
+  //   console.log('aqui toy')
+  //   if(datofiltrado.length = 0){
+  //     Swal.fire({
+  //       icon: 'error',
+  //       title: 'Oops...',
+  //       text: 'No encontramos este usuario en la base de datos!',
+  //     })
+  //   }
+  // }
 
   const entregaFiltro = (userFilterName) => {
     if(userFilterName.length = 1){
@@ -71,18 +81,23 @@ const index = () => {
     })
     console.log(resultFilterWithEmail);
     entregaFiltro(resultFilterWithEmail[0]);
+    // userNothing(resultFilterWithEmail[0]);
     // setSearch('');
     // setSearchEmail('');
+    return resultFilterWithEmail
   }
+  
 
   return (
     <section className="filtroUsuarios">
+      <center className="alert">ten presente que si el usuario no existe no te arrojara informacion</center>
       <div className="filtroUsuarios__container-title">
         <h3>Filtros de Búsqueda</h3>
         <button
           onClick={cleanUp}
         >Limpiar Filtros</button>
       </div>
+      {!fetchFilter && <p>el usuario no existe</p>}
 
       <form onSubmit={fetchFilter}>
         <div className="formulario__filtroUsuarios">

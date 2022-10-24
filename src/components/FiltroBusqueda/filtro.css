@@ -1,6 +1,6 @@
 .filtroUsuarios{
-    width: 89vw;
-    height: 40vh;
+    width: 87vw;
+    height: 50vh;
     background-color: #fff;
     margin-left: 120px;
     display: flex;
@@ -49,6 +49,10 @@
 /* contenedor label & input */
 .formulario__filtroUsuarios--item{
     margin: 5px auto;
+}
+.alert{
+    margin: 20px 0;
+    color: red;
 }
 
 /* items */
