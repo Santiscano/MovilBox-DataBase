@@ -7,7 +7,7 @@
     z-index: 0;
     top: 0;
     right: 0;
-    transition: all 300ms ease-in-out;
+    transition: all 1.5s ease-in-out;
 }
 
 /* titulos */
@@ -76,7 +76,7 @@
     height: 40px;
     font-size: 1rem;
     font-weight: 500;
-    transition: all 0.2s ease-in-out;
+    transition: all 0.7s ease-in-out;
 }
 .formulario__agregarUsuarios .agregarUsuarios__container-buttons .cancel{
     color: #99cf16;
@@ -90,7 +90,7 @@
     height: 40px;
     font-size: 18px;
     font-weight: 500;
-    transition: all 0.2s ease-in-out;
+    transition: all 0.7s ease-in-out;
 }
 .agregarUsuarios__container-buttons .agregar:hover,
 .agregarUsuarios__container-buttons .cancel:hover{

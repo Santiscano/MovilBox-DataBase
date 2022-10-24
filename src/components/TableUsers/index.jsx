@@ -107,7 +107,8 @@ const index = () => {
               user.state == 1 ? '   Activo   '
               : '   Inactivo   '
             }`),
-            user.updated_at, null]
+            user.updated_at,
+            null],
         ),
       },
     search: true,
