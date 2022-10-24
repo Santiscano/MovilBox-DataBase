@@ -33,7 +33,16 @@ const index = () => {
       Swal.fire({
         icon: 'success',
         title: 'Estos son los resultados encontrados',
-        text: `los datos del usuario son: ${userFilterName.name}, su correo es:${userFilterName.email} tiene un perfil de ${userFilterName.profile} y su estado actual es ${userFilterName.state}`,
+        text: `los datos del usuario son: ${userFilterName.name}, su correo es:${userFilterName.email} tiene un perfil de 
+        ${
+          userFilterName.profile == 1 ? 'Administrador' 
+          : userFilterName.profile == 2 ? 'Autor'
+          : userFilterName.profile == 3 ? 'Diseñador'
+          : userFilterName.profile == 4 ? 'Editor'
+          : userFilterName.profile == 5 ? 'Mantenimiento'
+          : 'Suscriptor'
+        } 
+          y su estado actual es ${userFilterName.state}`,
       })
     }else{
       Swal.fire({
